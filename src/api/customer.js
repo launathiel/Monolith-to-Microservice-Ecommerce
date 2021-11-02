@@ -59,7 +59,7 @@ module.exports = (app) => {
         try {
             
             const { _id } = req.user;
-    
+            
             const { street, postalCode, city,country } = req.body;
     
             const { data } = await service.AddNewAddress( _id ,{ street, postalCode, city,country});

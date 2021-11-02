@@ -66,10 +66,10 @@ module.exports = (app) => {
     app.put('/wishlist',UserAuth, async (req,res,next) => {
 
         const { _id } = req.user;
-        
+        console.log(req.user)
         try {
             const product = await service.GetProductById(req.body._id);
-            const wishList = await customerService.AddToWishlist(_id, product)
+            const wishList = await customerService.AddToWishlist(_id, product);
             return res.status(200).json(wishList);
         } catch (err) {
             

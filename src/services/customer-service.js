@@ -70,8 +70,6 @@ class CustomerService {
         } catch (err) {
             throw new APIError('Data Not found', err)
         }
-        
-    
     }
 
     async GetProfile(id){
